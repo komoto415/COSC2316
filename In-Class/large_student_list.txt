@@ -1,0 +1,200 @@
+Jaelynn	Dzur	Math	21	1.79
+Skylar	Cvek	History	22	2.36
+Raphael	Nocella	Pre Med	19	2.14
+Skylar	Movius	Political Science	21	1.95
+Joaquin	Loomis	Computer Science	18	2.35
+Bethany	Haldane	Pre Med	22	3.19
+Heaven	Garballey	Chemistry	21	3.23
+Raphael	Tranquilli	English	23	2.67
+Esther	Salamone	Math	21	2.23
+Chana	Irvin	Physics	21	1.40
+Alessandra	Pothier	History	23	2.44
+Heaven	Moules	Education	23	3.21
+Anika	Galluccio	Education	20	1.48
+Cruz	Reinagle	History	22	3.13
+Karley	Murphy	Chemistry	22	3.96
+Leia	Linsley	Computer Science	20	2.28
+Esther	Hazzard	Chemistry	22	3.32
+Cade	Kaska	Computer Science	19	3.02
+Landen	Iriye	Political Science	21	1.11
+Giada	Thompson	Biology	25	3.73
+Leia	Viveros-aguilera	Physics	21	1.51
+Clark	Garballey	Physics	18	1.46
+Yasmin	Darrow	History	21	2.52
+Justus	Genest	Physics	19	3.59
+Cade	Hemingway	Pre Med	21	1.91
+Alfredo	Andrew	Pre Med	23	1.83
+Heaven	Barnaby	Political Science	22	2.75
+Rebekah	Spartichino	Theology	24	3.24
+Kathy	Viveros-aguilera	Chemistry	18	2.62
+Alena	Holoien	Political Science	24	1.37
+Rylee	Dalton	Communications	25	3.38
+Alondra	Wallace	Education	21	2.20
+Semaj	Abernathy	Biology	23	3.35
+Carson	Racugno	Computer Science	25	2.52
+Rebekah	Ghosh	Pre Med	20	3.85
+Brent	Barnaby	History	18	1.13
+Ezequiel	Gerraughty	Communications	20	1.57
+Sterling	Grove	English	18	3.46
+Xzavier	Kaska	Communications	20	1.04
+Myah	Linsley	Pre Med	24	1.74
+Clark	Loomis	Math	19	2.30
+Sam	Surey	Education	23	1.37
+Kash	Nocella	Physics	21	1.55
+Alessandra	Mcgahan	Biology	19	1.21
+Jovanny	Kavalieris	Computer Science	18	3.05
+Kaila	Kounias	Biology	23	3.36
+Jasper	Lehne	Chemistry	22	2.57
+Jaelynn	Movius	Physics	20	3.60
+Quinn	Mackie	Physics	19	2.90
+Reynaldo	Zani	Math	23	1.28
+Elise	Holwell	Political Science	25	3.49
+Nathanael	Kavalieris	Biology	20	1.03
+Jeffery	Garballey	Chemistry	25	2.49
+Case	Dodds	Pre Med	19	3.46
+Dereon	Hemingway	Theology	19	1.88
+Elise	Devney	Communications	18	1.34
+Payton	Hastings	Political Science	18	2.67
+Samson	Loomis	English	19	1.66
+Regan	Movius	Theology	19	3.66
+Keyon	Cratsley	Education	24	2.23
+Lilian	Glick	Computer Science	21	3.62
+Corbin	Viggiani	Chemistry	19	2.80
+Kathleen	Dalton	Math	25	1.71
+Reid	Moules	Math	21	1.80
+Amina	Montessori	Political Science	25	2.87
+Paula	Mcgahan	Pre Med	24	3.46
+Colten	Mullins	Physics	19	3.94
+Teagan	Oesterling	Political Science	20	2.69
+Colin	Schlachter	English	24	3.10
+Bridger	Brzoza	English	18	1.88
+Jaqueline	Kounias	Pre Med	19	3.31
+Skyla	Viggiani	Education	19	2.70
+Zaria	Lehne	Political Science	18	1.29
+Cade	King	Computer Science	22	3.06
+Claire	Moules	Chemistry	22	2.76
+Tyrell	Cvek	Physics	24	3.67
+Dereon	Dohrman	Pre Med	21	3.08
+Xzavier	Pelrine	Theology	20	2.81
+Alfredo	Neushul	Chemistry	20	3.91
+Peyton	Mullins	Pre Med	19	1.67
+Bethany	Papandreou	English	20	2.04
+Bethany	Salamone	Theology	23	3.23
+Amanda	Consonni	Theology	21	1.69
+Karina	Cutler	Math	18	1.86
+Daphne	Darrow	Biology	25	2.88
+India	Pelrine	Political Science	19	3.52
+Stacy	Temple	Political Science	21	2.44
+Marcelo	Sherwood	Computer Science	21	3.69
+Reynaldo	De	Chemistry	20	2.65
+Karley	Nicholas	Chemistry	19	3.73
+Destiny	Vitiello	Communications	21	3.83
+Lamont	Nicholas	Political Science	23	2.93
+Miracle	Kounias	Math	24	1.32
+Maren	Gerraughty	Biology	20	3.67
+Denisse	Maclachlan	History	19	3.10
+Amaris	Quiroga	History	19	3.63
+Helena	Halliburton	Education	23	3.90
+Savanna	Tempesta	Computer Science	20	1.34
+Brody	Chaput	Math	22	1.78
+Nicolas	Pian	Computer Science	21	1.59
+Kymani	Durham	Theology	21	2.19
+Denisse	Zhao	Theology	22	2.61
+Cooper	Haldane	Political Science	25	1.75
+Harmony	Cutler	Physics	21	2.10
+Fisher	Anesko	Communications	22	3.14
+Madilyn	Hastings	Education	22	1.95
+Nathanael	Siekkinen	Education	22	1.07
+Regan	Propert	Physics	25	3.62
+Mareli	Maclachlan	Chemistry	22	1.80
+Tucker	Racugno	English	21	2.63
+Delaney	Papandreou	Political Science	18	1.85
+Clark	Thompson	Pre Med	21	1.37
+Delaney	Southern	Education	20	3.04
+Geovanni	Hastings	Communications	22	2.52
+Katelynn	Dodds	Theology	21	1.97
+Maren	Vitiello	Biology	20	2.04
+Ashley	Murphy	Chemistry	22	1.89
+Douglas	Brien	Political Science	19	2.14
+Zachery	Abernathy	Computer Science	24	3.82
+Quinten	Surey	Physics	25	3.79
+Kassandra	Kotelchuk	Computer Science	19	1.74
+Alena	Continolo	Pre Med	19	2.66
+Jonathon	Southern	History	18	2.19
+Case	Pillsworth	Pre Med	18	3.63
+Kaila	Montessori	Theology	20	2.38
+Hazel	Marzke	Chemistry	19	2.13
+Harper	Nocella	Pre Med	24	3.58
+Harley	Lehne	History	23	1.47
+Daphne	Loehr	Pre Med	20	2.65
+Nicolas	Arber	Computer Science	22	1.20
+Leia	Zhao	English	24	2.73
+Lilian	Gwynne	Math	20	2.55
+Isabela	Maclachlan	Education	24	3.91
+Jensen	Nocella	English	23	1.90
+Cherish	Avalle-arce	Communications	19	3.38
+Jaelynn	Iriye	Communications	25	2.64
+Jazlyn	Cleaves	Communications	21	3.55
+Memphis	Gimmelfarb	Physics	20	2.39
+Kimora	Salamone	History	24	3.10
+Jeffery	Pels	Education	18	1.12
+Dwayne	Schutte	Theology	25	2.63
+Marcel	Avalle-arce	English	24	1.37
+Cruz	Holwell	Pre Med	20	3.65
+Charlotte	Maron	Computer Science	20	3.37
+Semaj	Continolo	Education	19	1.09
+Mohammad	Sheikh	Theology	24	3.16
+Fisher	Darlington	Political Science	23	2.97
+Peyton	Marzke	Biology	22	3.93
+Alena	Edley	Chemistry	23	3.61
+Jazmin	Hemingway	Biology	20	1.29
+Lucian	Zani	Education	19	3.23
+Teagan	Viggiani	Computer Science	25	3.98
+Jennifer	Beyer	Biology	24	1.80
+Paul	Vito	Pre Med	21	3.83
+Raul	Audet	Math	25	3.67
+Anika	Gottsdanker	Physics	24	1.14
+Bethany	Kavalieris	Pre Med	25	2.85
+Todd	Bysshe	Biology	25	1.68
+Jamison	Glick	Education	19	3.89
+Dereon	Consonni	Education	24	2.98
+Maren	Pels	History	19	2.74
+Isla	Covarrubias	English	19	2.30
+Juan	Lepage	Math	24	3.57
+Morgan	Casarez	Computer Science	22	3.29
+Marisa	Nicholas	Physics	21	2.46
+Amina	Renick	Political Science	25	1.45
+Jazmin	Nocella	Political Science	21	1.61
+Alessandra	Haden	Math	24	2.29
+Miracle	Bethe	English	20	2.12
+Brent	Lad	Biology	21	2.92
+Jasper	Ghosh	Pre Med	20	3.81
+Teagan	Bysshe	Communications	25	2.87
+Ross	Bond	Pre Med	24	1.52
+Abigayle	Judge	Political Science	19	2.95
+Joe	Lehne	English	25	3.79
+Abdullah	Kronauer	Pre Med	24	1.82
+Maximilian	Gimmelfarb	History	21	2.93
+Mia	Diaconis	Pre Med	21	2.28
+Jovanny	Nicholas	Biology	18	1.78
+Marcel	Bogosian	Computer Science	24	3.85
+Fisher	Vito	Chemistry	22	1.42
+Brent	Chaput	English	22	3.41
+Dakota	Luebke	Physics	20	3.15
+Tate	Darlington	Education	21	3.01
+Colin	Siekkinen	History	25	2.16
+Tate	Tse	English	22	2.20
+Rebekah	Glick	English	25	3.32
+Ali	Vitiello	History	22	2.20
+Kathleen	Mackie	Chemistry	24	2.08
+Charlotte	Andrew	History	24	3.40
+Payton	Novio	Theology	24	2.41
+Rylee	Glick	History	19	2.93
+Alena	Bloomfield	History	24	2.59
+Jasper	Wallington	Education	23	1.07
+Kash	Pelrine	Pre Med	23	2.34
+Kymani	Loehr	Computer Science	19	3.87
+Donavan	Gerraughty	Theology	23	2.07
+Kaitlin	Surey	Biology	21	1.20
+Alexus	Nicholas	Education	25	1.40
+Lucian	Dahlin	Biology	18	1.78
