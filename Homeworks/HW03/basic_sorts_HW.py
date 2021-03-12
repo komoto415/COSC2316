@@ -1,5 +1,5 @@
 # Jeffrey
-# Submission date here
+# 09.03.2021
 # basic_sorts_HW.py
 # This program contains the same sorting algorithms from basic_sorts.py
 # The goal of this assignment is to instrument the code (count the operations)
