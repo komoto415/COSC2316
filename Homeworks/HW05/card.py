@@ -30,6 +30,19 @@ class Card:
     def suit(self):
         return self.__suit
 
+    def face_str(self):
+        if self.face <= 10:
+            return str(self.face)
+        else:
+            if self.face == 11:
+                return "J"
+            elif self.face == 12:
+                return "Q"
+            elif self.face == 13:
+                return "K"
+            elif self.face == 14:
+                return "A"
+
     def __gt__(self, other):
         if self.face > other.face:
             return True
@@ -45,14 +58,4 @@ class Card:
         return f"Card({self.face}, {self.Suit})"
 
     def __str__(self):
-        face_str = self.face
-        if self.face == 11:
-            face_str = "J"
-        elif self.face == 12:
-            face_str = "Q"
-        elif self.face == 13:
-            face_str = "K"
-        elif self.face == 14:
-            face_str = "A"
-
-        return f"{face_str}{self.suit.symbol()}"
+        return f"{self.face_str()}{self.suit.symbol()}"
