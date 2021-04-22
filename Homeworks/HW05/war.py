@@ -5,7 +5,19 @@ class WarPlayer(Player):
 
     def __init__(self):
         super().__init__()
-        self.disc = []
+        self.__disc = []
+
+    @property
+    def disc(self):
+        return self.__disc
+
+    def discard_to_hand(self):
+        self.__hand.extend(self.__disc)
+        self.__disc = []
+        shuffle(self.__hand)
+
+    def field_to_disc(self, field):
+        self.__disc.extend(field)
 
     def __str__(self):
         curr = super().__str__() + "\n" + "Discard: ["
@@ -24,7 +36,6 @@ class War:
         self.__p1 = WarPlayer()
         self.__p2 = WarPlayer()
         self.__field = []
-        self.__round = 0
 
         for _ in range(26):
             self.__p1.add_card(self.__deck.deal())
@@ -46,33 +57,30 @@ class War:
     def field(self):
         return self.__field
 
-    @property
-    def round(self):
-        return self.__round
-
     def play_game(self):
         game_done = False
-        print("Go Next Round? (Y|n)")
+        print("Let's get this started!")
         while not game_done:
-            print(">>>", end=" ")
-            next_round = input().lower().strip()
-            if next_round not in ['y', 'n', '']:
-                print("Invalid input. Please try again.")
-                continue
-            game_done = not self.next_round()
+            if not self.first:
+                print("\nGo Next Round? (Y|n)")
+                print(">>>", end=" ")
+                next_round = input().lower().strip()
+                if next_round not in ['y', 'n', '']:
+                    print("Invalid input. Please try again.")
+                    continue
+            game_done = not self.__next_round()
 
-    def next_round(self):
+    def __next_round(self):
         # Doing "transition" of the last round to current round "clearing" board for this new round
         if not self.first:
             if self.last_won == "P1":
-                self.p1.disc.extend(self.field)
+                self.p1.field_to_disc(self.field)
             else:
-                self.p2.disc.extend(self.field)
+                self.p2.field_to_disc(self.field)
 
             self.__field = []
 
         # actual new round stuff
-        self.__round += 1
         self.first = False
         who_won_round = None
         while who_won_round is None:
@@ -81,7 +89,10 @@ class War:
 
             self.__field.append(p1_card_played)
             self.__field.append(p2_card_played)
+
+            print(self.p1)
             print(f"Field: {p1_card_played} vs {p2_card_played}")
+            print(self.p2)
 
             if p1_card_played != p2_card_played:
                 who_won_round = p1_card_played > p2_card_played
@@ -89,7 +100,7 @@ class War:
                 print("Tie. Draw Again.")
 
         print(who_won_round)
-        game_winner = self.check_game_winner()
+        game_winner = self.__check_game_winner()
         if game_winner is not None:
             if game_winner:
                 print("Player 1 wins")
@@ -115,13 +126,9 @@ class War:
 
         sanity = len(self.p1.hand) + len(self.p1.disc) + len(self.p2.hand) + len(self.p2.disc) + len(self.field)
         assert sanity == 52, "Something went wrong, this should always be 52"
-        print(self.p1)
-        [print(card, end=" ") for card in self.field]
-        print()
-        print(self.p2)
         return True
 
-    def check_game_winner(self):
+    def __check_game_winner(self):
         p1_total = len(self.p1.hand) + len(self.p1.disc)
         p2_total = len(self.p2.hand) + len(self.p2.disc)
 
@@ -134,14 +141,10 @@ class War:
             return p1_total > p2_total
 
         if len(self.p1.hand) == 0:
-            self.p1.hand.extend(self.p1.disc)
-            self.p1.disc = []
-            shuffle(self.p1.hand)
+            self.p1.discard_to_hand()
 
         if len(self.p2.hand) == 0:
-            self.p2.hand.extend(self.p2.disc)
-            self.p2.disc = []
-            shuffle(self.p2.hand)
+            self.p2.discard_to_hand()
 
         return None
 
@@ -153,5 +156,4 @@ class War:
         return "Nothing to see here for now"
 
 war = War()
-# war.play_game()
-
+war.play_game()
