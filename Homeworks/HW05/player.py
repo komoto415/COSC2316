@@ -1,7 +1,11 @@
 
 class Player:
     def __init__(self):
-        self.hand = []
+        self.__hand = []
+
+    @property
+    def hand(self):
+        return self.__hand
 
     def add_card(self, card):
         self.hand.append(card)
