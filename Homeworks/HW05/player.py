@@ -20,7 +20,7 @@ class Player:
         self.hand.append(card)
 
     def __str__(self):
-        hand = f"{self.name}{self.player_id}\nHand: ["
+        hand = f"Played: {self.name} with ID: {self.player_id}\nHand: ["
         for card in self.hand:
             hand += str(card) + ", "
 
