@@ -2,7 +2,6 @@ from deck import *
 from player import *
 
 class WarPlayer(Player):
-
     def __init__(self):
         super().__init__()
         self.__disc = []
@@ -101,16 +100,18 @@ class War:
 
         print(who_won_round)
         game_winner = self.__check_game_winner()
-        if game_winner is not None:
+        if not game_winner is None:
             if game_winner:
                 print("Player 1 wins")
             else:
                 print("Player 2 wins")
             print("Would you like to play again? (Y|n)")
-            while True:
+            valid_resp = False
+            while not valid_resp:
                 print(">>>", end=" ")
                 keep = input().lower().strip()
-                if keep not in ['y', 'n', '']:
+                valid_resp = keep in ['y', 'n', '']
+                if not valid_resp:
                     print("Invalid input. Please try again.")
                     continue
                 else:
@@ -119,7 +120,6 @@ class War:
                         return False
                     else:
                         self.reset()
-                    break
         else:
             self.last_won = "P1" if who_won_round else "P2"
             print(f"Round Winner: {self.last_won}")
