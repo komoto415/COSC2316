@@ -13,61 +13,39 @@ class GoFishPlayer(Player):
         raise
 
     def remove_cards_with_face(self, face):
-        self.hand = [card for card in self.hand if card.face != face]
+        self.__hand = [card for card in self.hand if card.face != face]
+
+    def pick_card_to_ask(self):
+        pass
 
     def __str__(self):
         return super().__str__()
 
-# VALID = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "j", "q", "k", "a", "jack", "queen", "king", "ace"]
-#
-# VALIDS = {
-#     "2": 2,
-#     "3":
-#     }
-
-
-class GoFish:
+class GoFishHuman(GoFishPlayer):
     def __init__(self):
-        self.reset()
+        super().__init__()
 
-    def reset(self):
-        self.__deck = Deck()
-        self.__p1 = GoFishPlayer()
-        self.__p2 = GoFishPlayer()
-        self.__p1_points = 0
-        self.__p2_points = 1
+    def pick_card_to_ask(self):
+        [print(card) for card in self.hand]
+        print("Ask for a card:")
+        while True:
+            print(">>>", end=" ")
+            desired = input().lower().strip()
+            if not desired in [card.face for card in self.hand]:
+                print("You don't have a card of that value in your hand. Stupid.")
+                [print(card) for card in self.hand]
+                continue
+            return desired
+
+class GoFishComputer(GoFishPlayer):
+    def __init__(self):
+        super().__init__()
         self.last_asked = None
 
-        for _ in range(7):
-            self.__p1.add_card(self.__deck.deal())
-            self.__p2.add_card(self.__deck.deal())
-
-    @property
-    def p1(self):
-        return self.__p1
-
-    @property
-    def p2(self):
-        return self.__p2
-
-    @property
-    def p1_points(self):
-        return self.__p1_points
-
-    @property
-    def p2_points(self):
-        return self.__p2_points
-
-    def add_point(self, player):
-        if player == self.p1:
-            self.__p1_points += 1
-        elif player == self.p2:
-            self.__p2_points += 1
-
-    def comp_ask_for_card(self):
+    def pick_card_to_ask(self):
         import random
         face_count = {}
-        for card in self.p2.hand:
+        for card in self.hand:
             face_count[card.face] = face_count.get(card.face, 0) + 1
 
         groups = ([], [], [], [])
@@ -94,54 +72,45 @@ class GoFish:
                     flip = random.randint(0, len(group) - 1)
                 print("flip:", flip)
                 desired = group[flip]
-                print("desired:", desired)
-
-                if desired in [card.face for card in self.p1.hand]:
-                    self.p2.add_card(self.p1.get_card_with_face(desired))
-                else:
-                    print("Go Fish")
-                    self.p2.add_card(self.__deck.deal())
-
                 self.last_asked = desired
+                return desired
 
-                break
+class GoFish:
+    def __init__(self):
+        self.reset()
 
-    def ask_for_card(self):
-        [print(card) for card in self.p1.hand]
-        print("Ask for a card:")
-        while True:
-            print(">>>", end=" ")
-            desired = input().lower().strip()
-            if not desired in [card.face for card in self.p1.hand]:
-                print("You don't have a card of that value in your hand. Stupid.")
-                continue
-            else:
-                if desired in [card.face for card in self.p2.hand]:
-                    self.p1.add_card(self.p2.get_card_with_face(desired))
-                else:
-                    print("Go Fish")
-                    self.p1.add_card(self.__deck.deal())
-                    break
+    def reset(self):
+        self.__deck = Deck()
+        self.__p1 = GoFishHuman()
+        self.__p2 = GoFishComputer()
+        self.__p1_points = 0
+        self.__p2_points = 0
 
-    def play_game(self):
-        game_done = False
-        while not game_done:
-            self.ask_for_card()
-            check_p1_hand = self.found_four_of_a_kind(self.p1.hand)
-            if not check_p1_hand is None:
-                self.add_point(self.p1)
-                self.p1.remove_cards_with_face(check_p1_hand)
-            self.comp_ask_for_card()
-            check_p2_hand = self.found_four_of_a_kind(self.p2.hand)
-            if not check_p2_hand is None:
-                self.add_point(self.p2)
-                self.p2.remove_cards_with_face(check_p2_hand)
-            game_done = len(self.p1.hand) == 0 or len(self.p2.hand) == 0
+        for _ in range(7):
+            self.__p1.add_card(self.__deck.deal())
+            self.__p2.add_card(self.__deck.deal())
 
-        if self.p1_points > self.p2_points:
-            print("Human has wonnered")
-        else:
-            print("All your base are belong to us")
+    @property
+    def p1(self):
+        return self.__p1
+
+    @property
+    def p2(self):
+        return self.__p2
+
+    @property
+    def p1_points(self):
+        return self.__p1_points
+
+    @property
+    def p2_points(self):
+        return self.__p2_points
+
+    def __add_point(self, player):
+        if player == self.p1:
+            self.__p1_points += 1
+        elif player == self.p2:
+            self.__p2_points += 1
 
     @staticmethod
     def found_four_of_a_kind(hand):
@@ -153,13 +122,42 @@ class GoFish:
         else:
             return None
 
+    def play_game(self):
+        game_done = False
+        asker = self.p1
+        askie = self.p2
+        while not game_done:
+            asker_asks_for = asker.pick_card_to_ask()
+            if asker_asks_for in [card.face for card in askie.hand]:
+                asker.add_card(askie.get_card_with_face(asker_asks_for))
+            else:
+                print("Go Fish")
+                asker.add_card(self.__deck.deal())
+            check_asker_hand = self.found_four_of_a_kind(asker.hand)
+            check_askie_hand = self.found_four_of_a_kind(askie.hand)
+            if not check_asker_hand is None:
+                self.__add_point(asker)
+                asker.remove_cards_with_face(check_asker_hand)
+            if not check_askie_hand is None:
+                self.__add_point(askie)
+                askie.remove_cards_with_face(check_askie_hand)
+
+            game_done = any([len(asker.hand) == 0, len(askie.hand) == 0])
+            if not game_done:
+                asker, askie = askie, asker
+
+        if self.p1_points > self.p2_points:
+            print("Human has wonnered")
+        else:
+            print("All your base are belong to us")
+
 game = GoFish()
-while True:
-    print("Player " + str(game.p1))
-    print("Computer " + str(game.p2))
-
-    game.comp_ask_for_card()
-
-    print("Player " + str(game.p1))
-    print("Computer " + str(game.p2))
-    input()
+# while True:
+# print("Player " + str(game.p1))
+# print("Computer " + str(game.p2))
+#
+# game.comp_ask_for_card()
+#
+# print("Player " + str(game.p1))
+# print("Computer " + str(game.p2))
+# input()
