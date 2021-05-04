@@ -16,11 +16,17 @@ class Player:
     def name(self):
         return self.__name
 
+    def hand_as_faces(self):
+        return [card.face_str() for card in self.hand]
+
     def add_card(self, card):
         self.hand.append(card)
 
+    def __eq__(self, other):
+        return self.hand == other.hand and self.player_id == other.player_id and self.name == other.name
+
     def __str__(self):
-        hand = f"Played: {self.name} with ID: {self.player_id}\nHand: ["
+        hand = f"Player: {self.name} with ID: {self.player_id}\nHand: ["
         for card in self.hand:
             hand += str(card) + ", "
 

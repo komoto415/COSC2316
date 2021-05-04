@@ -36,3 +36,4 @@ class Deck:
             deck_str += str(card) + '\n'
 
         return deck_str.strip()
+

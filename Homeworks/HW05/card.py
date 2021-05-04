@@ -43,6 +43,12 @@ class Card:
             elif self.face == 14:
                 return "A"
 
+    def __hash__(self):
+        return hash(self.face) * 1337 + hash(self.suit) * 1337
+
+    def __eq__(self, other):
+        return hash(self) == hash(other)
+
     def __gt__(self, other):
         if self.face > other.face:
             return True
@@ -50,9 +56,6 @@ class Card:
             return self.suit > other.suit
         else:
             return False
-
-    def __eq__(self, other):
-        return self.face == other.face and self.suit == other.face
 
     def __repr__(self):
         return f"Card({self.face}, {self.Suit})"
